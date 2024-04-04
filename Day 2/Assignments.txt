@@ -1,0 +1,110 @@
+Assignments for Day-2
+~~~~~~~~~~~~~~~~~~~
+1.   What is Views in MySql?  Why do we use Views? How to create views in MySql?
+
+A view is a database object that has no values. Its contents are based on the base table, it has no data of its own. View only stores the syntax not the data. If any changes occur in the underlying table, the same changes reflected in the View also.
+
+Uses:
+--> Simplify complex query
+--> Increases the Re-usability
+--> Help in Data Security
+
+CREATE [OR REPLACE] VIEW view_name AS    
+SELECT columns    
+FROM tables    
+[WHERE conditions]; 
+
+To see the view: SELECT * FROM view_name;
+
+2.  Create a stored procedures that will display the employee details based on the given dept name.  Dept name is the input for stored procedure.
+delimiter //
+create procedure usp_emp_byDept(in deptname varchar(100))
+begin
+select * from emp where dept_name like deptname;
+end //
+delimiter ;
+
+set @deptname='HR';
+call usp_emp_byDept(@deptname);   
+
+3. Create stored procedures that get employees count who are having greater salary than the average of all salaries.  Return employees count  as output variable. 
+
+delimiter //
+create procedure usp_emp_bySal(out e_count int)
+begin
+select count(*) into e_count from emp where salary>(select avg(salary) from emp);
+end //
+delimiter ;
+
+call usp_emp_bySal(@e_count);
+select @e_count;
+
+4. Create stored procedures that insert the data into emp table. Take all the required values as input parameters.  
+delimiter //
+create procedure usp_insert_emp(in id int,in name varchar(100) ,in dept_name varchar(100),in salary int)
+begin
+insert into emp values (id,name,dept_name,salary);
+end //
+delimiter ;
+
+set @deptname='Test';
+set @id=5;
+set @name='hardik';
+set @sal=7500;
+call usp_insert_emp(@id,@name,@deptname,@sal);
+
+
+5. Create View to return employee job and corresponding  max salary in each job.  
+create view dept_maxSal as
+select dept_name,max(salary) from emp group by dept_name;
+
+select * from dept_maxSal;
+
+6.  How to use distinct option in select query? 
+-->select distinct(dept_name) from emp;
+-->select count(distinct(dept_name)) as tot_dept from emp;
+
+
+7.   Create  ProductsLogs table to store the following information. 
+		 Eg:	  Id, Operation, ProductId, ProductName,  Date, Time,  Message 
+		
+		Hint: Target the Products table. 
+create table ProductsLogs(
+id int primary key not null auto_increment,
+operation varchar(100) not null,
+ProductId int not null, 
+ProductName varchar(100) not null,  
+Date date not null , 
+Time time not null,  
+Message text not null
+);
+		
+8.    Create  a AFTER INSERT trigger operation  and  insert the corresponding details ProductsLogs table. 
+
+delimiter //
+create trigger trg_after_insert after insert on products for each row
+begin
+set @op:='Insert';
+set @msg:=concat(@op,' operation done on ',curdate(),' at ',curtime(),' , id: ',new.ProductId,' - ',new.name,' was added ');
+insert into ProductsLogs ( Operation, ProductId, ProductName,  Date, Time,  Message ) 
+values (@op,new.ProductId,new.name,curdate(),curtime(),@msg);
+end //
+delimiter ;
+
+
+insert into products values(1006,'Trousers',8,1500,'Fashion');
+
+9.  Create  a AFTER DELETE trigger operation  and  insert the corresponding details ProductsLogs table with corresponding message. 		
+
+delimiter //
+create trigger trg_after_delete after delete on products for each row
+begin
+set @op:='Delete';
+set @msg:=concat(@op,' operation done on ',curdate(),' at ',curtime(),' , id: ',old.ProductId,' - ',old.name,' was deleted ');
+insert into ProductsLogs ( Operation, ProductId, ProductName,  Date, Time,  Message ) 
+values (@op,old.ProductId,old.name,curdate(),curtime(),@msg);
+end //
+delimiter ;	
+
+delete from shoppingcartdb.products where productid=1006;
+
