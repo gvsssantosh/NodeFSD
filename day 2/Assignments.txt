@@ -1,0 +1,68 @@
+Assignments for Day-2
+~~~~~~~~~~~~~~~~~~~
+1.   What is Views in MySql?  Why do we use Views? How to create views in MySql?
+
+A view is a database object that has no values. Its contents are based on the base table, it has no data of its own. View only stores the syntax not the data. If any changes occur in the underlying table, the same changes reflected in the View also.
+
+Uses:
+--> Simplify complex query
+--> Increases the Re-usability
+--> Help in Data Security
+
+CREATE [OR REPLACE] VIEW view_name AS    
+SELECT columns    
+FROM tables    
+[WHERE conditions]; 
+
+To see the view: SELECT * FROM view_name;
+
+2.  Create a stored procedures that will display the employee details based on the given dept name.  Dept name is the input for stored procedure.
+delimiter //
+create procedure usp_emp_byDept(in deptname varchar(100))
+begin
+select * from emp where dept_name like deptname;
+end //
+delimiter ;
+
+set @deptname='HR';
+call usp_emp_byDept(@deptname);   
+
+3. Create stored procedures that get employees count who are having greater salary than the average of all salaries.  Return employees count  as output variable. 
+
+delimiter //
+create procedure usp_emp_bySal(out e_count int)
+begin
+select count(*) into e_count from emp where salary>(select avg(salary) from emp);
+end //
+delimiter ;
+
+call usp_emp_bySal(@e_count);
+select @e_count;
+
+4. Create stored procedures that insert the data into emp table. Take all the required values as input parameters.  
+delimiter //
+create procedure usp_insert_emp(in id int,in name varchar(100) ,in dept_name varchar(100),in salary int)
+begin
+insert into emp values (id,name,dept_name,salary);
+end //
+delimiter ;
+
+set @deptname='Test';
+set @id=5;
+set @name='hardik';
+set @sal=7500;
+call usp_insert_emp(@id,@name,@deptname,@sal);
+
+
+5. Create View to return employee job and corresponding  max salary in each job.  
+create view dept_maxSal as
+select dept_name,max(salary) from emp group by dept_name;
+
+select * from dept_maxSal;
+
+6.  How to use distinct option in select query? 
+-->select distinct(dept_name) from emp;
+-->select count(distinct(dept_name)) as tot_dept from emp;
+
+
+
