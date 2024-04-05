@@ -1,0 +1,42 @@
+1.   Go through the node js fundamental documents that i shared. 
+2.   Study the Project Case Study and discuss with your project team member. 
+3.  Find some details about the following things about node:
+			a.   Find some more details about callbacks
+
+			Callbacks in Node.js are functions that are passed as arguments to other functions and are executed 				asynchronously when certain operations complete.
+
+			b.   Check the following methods in javascript where callbacks are involved:
+
+								a.  map()
+								Executes a callback function on each element of an array and returns a new 									array with the results.
+
+								b.  findIndex()
+								Returns the index of the first element in an array that satisfies a provided 										callback function, or -1 if none is found.
+
+								c.   find()
+								Returns the value of the first element in an array that satisfies a provided 										callback function, or undefined if none is found.
+
+								d. filter() 
+								Creates a new array with all elements that pass the test implemented by the 									provided callback function.
+
+			c.   What kind of applications we can create using node js?
+
+			-->Web applications (both server-side and client-side).
+			-->Real-time applications like chat applications and online gaming.
+			-->APIs and microservices.
+			d.   Find out more details  about "Event Loops" in node js 
+
+			Node.js operates on a single-threaded, event-driven architecture. The event loop is a central part of this 			architecture. It continuously listens for events and executes callback functions when events occur. The 			event loop allows Node.js to handle multiple concurrent operations efficiently without blocking, making 			it suitable for handling high loads and I/O-heavy tasks.
+
+4.  What are differences between MySql and MongoDb?  
+MySQL is a relational database system that stores data in a structured tabular format. In contrast, often styled as a non-relational (or NoSQL) system, MongoDB stores data as JSON documents in a more flexible format.
+
+MongoDB documents consist of a series of key/value pairs of varying types, including arrays and nested documents; however, the primary difference is that the structure of the key/value pairs in a given collection can vary from document to document. This more flexible approach is possible because documents are self-describing.
+
+MongoDB offers improved flexibility and horizontal scalability, but at the cost of some safety features of relational databases, such as referential integrity.
+
+5.  What is "let"  keyword in javascript? Diff. between  "var" and "left" keyword?
+Var is function scoped and let is block scoped. Variable declared by let cannot be redeclared and must be declared before use whereas variables declared with var keyword are hoisted. 	
+
+It means that a variable declared with var can be accessed anywhere within the current function or global scope, while a variable declared with let can only be accessed within the block it was declared.		
+								
