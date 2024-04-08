@@ -31,7 +31,8 @@ arrProdObj.push({"id":1006,"pname":"Red Gram", "price":75, "qty":8,  "category":
 console.log(arrProdObj);
 
 // 	  d.   delete the product based on the product id 
-arrProdObj.pop(item=>item.id==1006);
+let index=arrProdObj.findIndex(item=>item.id==1006);
+arrProdObj.splice(index,1);
 console.log(arrProdObj);
 
 // 	  e.   display the product details based on the range of price (min, max) 
