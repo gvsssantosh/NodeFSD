@@ -1,0 +1,57 @@
+1. What is Regular expression in JavaScript?
+
+A regular expression is a sequence of characters that forms a search pattern.
+
+The search pattern can be used for text search and text replace operations.
+
+syntax:    /pattern/modifiers;
+ex-          /w3schools/i;
+
+/w3schools/i  is a regular expression.
+
+w3schools  is a pattern (to be used in a search).
+
+i  is a modifier (modifies the search to be case-insensitive).
+
+2. How to use Regular Expressions in JavaScript?
+let text = "Visit W3Schools!";
+let n = text.search("W3Schools");
+
+Output - 6
+
+let text = "Visit Microsoft!";
+let result = text.replace(/microsoft/i, "W3Schools");
+
+Output - Visit W3Schools!
+
+3. Go through the details of javascript array methods :
+· map, find, findindex, filter
+4. Study the following urls :
+. https://www.w3schools.com/angular/customers.php
+. https://regres.in/api/users/
+
+
+Assignments-2
+~~~~~~~~~~~~
+		Create an array of product objects and each product object should include the following properties.
+
+		properties:		id, pname, price, qty,  category 
+		
+	  a.  display the product details based on the given product id		
+	  b.  display the product names and unit price based on the given category
+	  c.   add new product to array 
+	  d.   delete the product based on the product id 
+	  e.   display the product details based on the range of price (min, max) 
+	  f.    display out of stock products  (i.e qty is zero)
+	  g.   perform sorting the array based on the price 
+	  
+		
+		
+		Note:  display proper message if the given requirements are not satisfy the conditions(for example "product not found").
+		
+		
+Assignments-3
+~~~~~~~~~~~~~
+		a.  How to extract only values from the object?
+		b.  How to clone the object?
+		
