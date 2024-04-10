@@ -26,6 +26,17 @@ Output - Visit W3Schools!
 
 3. Go through the details of javascript array methods :
 · map, find, findindex, filter
+				a.  map()
+				Executes a callback function on each element of an array and returns a new array with the results.
+
+				b.  findIndex()
+				Returns the index of the first element in an array that satisfies a provided callback function, or 				-1 if none is found.
+
+				c.   find()
+				Returns the value of the first element in an array that satisfies a provided callback function, or 				undefined if none is found.
+
+				d. filter() 
+				Creates a new array with all elements that pass the test implemented by the provided callback
 4. Study the following urls :
 . https://www.w3schools.com/angular/customers.php
 . https://regres.in/api/users/
