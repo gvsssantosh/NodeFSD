@@ -78,7 +78,8 @@ console.log("-------------------4 question---------------");
 async function getCustomerByCountry(country_name){
     let url="https://www.w3schools.com/angular/customers.php";
     let result=await axios.get(url);
-    return result.data.records.filter((item)=>item.Country==country_name);
+	let custArr=result.data.records;
+    return custArr.filter((item)=>item.Country==country_name);
     // result for getting germany items
     // response.filter((item)=>item.Country=="Germany")
 }
