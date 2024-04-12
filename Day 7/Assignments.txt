@@ -1,0 +1,38 @@
+Assignments -- Day7	(Async Programming)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.   Create a node program  to implement the following requirement:
+		 a. Create a promise that will generate a random number between 1 to 50
+		 b. If the number is 5 multiple,  resolve the send that number
+		 c. Else, reject with error message.
+		 d.Consume the promise object 
+		 e. run the application multiple times to observer the success/error message. 
+		 	 		 
+2.  Create a node program  to display users data.  
+		url :  https://reqres.in/api/users/		
+
+3.   Update the previous example using Async and Await.
+
+4.   Create a function  called getCustomerByCountry() that takes the country name as parameter and should return customers data based on the given country. 
+
+		a.  Url :   https://www.w3schools.com/angular/customers.php
+		b.  use async and await if required. 
+		
+ 
+
+
+ 
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
