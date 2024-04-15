@@ -1,0 +1,15 @@
+1.What is Relative Path,Absolute Path and Physical Path?
+
+A relative path specifies a file's location in the current working directory. An absolute path provides the full directory path from the root directory to the file.
+
+2.What is __filename,and__dirname in nodejs?
+__dirname - the directory in which the current file lives. __filename - the full path to the current file.
+
+3.Find details about following methods:
+	1.JSON.stringify()
+		JSON.stringify() takes a JavaScript object and transforms it into a JSON string.
+		Syntax: JSON.stringify(value, replacer, space);
+		Date formats aren’t allowed in JSON; thus, they should be included as strings.
+	2.JSON.parse()
+		JSON.parse() takes a JSON string and transforms it into a JavaScript object.
+		Syntax: JSON.parse( string, function )
