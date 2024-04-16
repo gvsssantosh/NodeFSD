@@ -1,0 +1,47 @@
+What are the environment variables? Why do we use in Node JS?
+
+Environment variables are a fundamental part of developing with Node.js, allowing your app to behave differently based on the environment(any computer or cloud) you want them to run in. Wherever your app needs configuration, you use environment variables.
+
+why:
+Because they externalize all environment specific aspects of your app and keep your app encapsulated. Now you can run your app anywhere by modifying the environment variables without changing your code and without rebuilding it.
+
+
+when:
+Any place in your code that will change based on the environment.
+eg:
+1. Which HTTP port to listen on
+2. What path and folder your files are located in, that you want to serve
+
+
+How to create and access environment variables?
+
+
+passing the environment variables
+1.using the command line
+2.using a .env file
+Create the .env file in the root of your app and add your variables and values to it.
+eg:
+NODE_ENV=development
+PORT=8626
+# Set your database/API connection information here
+API_KEY=**************************
+API_URL=**************************
+
+
+accessing:
+process.env.YOUR_ENV_VAR_GOES_HERE
+
+What is the folder structure(diff. folders that we create) of Node JS application? Find some details from internet? 
+>public>This folder contains static files that are visible to people, like index.html, script.js, and CDN links and files.
+>src>This folder present with the name of src which contains all the files required to handle server like routes, 		controllers, models, views, etc.
+	>>controllers/       (controllers for handling HTTP requests)
+	>>models/            (database models or data structures)
+	>>routes/            (route definitions)
+	>>services/          (business logic layer or services)
+	>>utils/             (utility functions or helper modules)
+>.env>
+>gitignore>
+>app.js
+
+What is ORM? Find some examples of ORM libraries and tools?
+ORM stands for Object-Relational Mapping. It's a programming technique that allows developers to map objects from an object-oriented programming language (like Python, Java, or JavaScript) to entities in a relational database (like tables, rows, and columns), and vice versa.
