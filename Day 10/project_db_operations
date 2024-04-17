@@ -19,3 +19,9 @@ exports.searchJobById = async (jobid) => {
     return jobArray[0];
 };
 
+apply to job:-
+exports.applyToJob = async (job_id,user_id,admin_id) => {
+    await db.query("insert into applications_table (job_id,user_id,employer_id) values (?,?,?)",[job_id,user_id,admin_id]); 
+    // return deptArray;
+    // 1001,101,100
+};
