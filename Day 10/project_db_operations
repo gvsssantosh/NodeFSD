@@ -25,3 +25,8 @@ exports.applyToJob = async (job_id,user_id,admin_id) => {
     // return deptArray;
     // 1001,101,100
 };
+
+// • Use Case: Manage Applications
+exports.deleteApplication = async (user_id) => {
+    await db.query("delete from applications_table where user_id="+user_id); 
+};
