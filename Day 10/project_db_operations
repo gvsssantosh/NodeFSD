@@ -1,0 +1,21 @@
+• Use Case: Create User Profile
+• Use Case: Search Jobs
+• Use Case: Apply to Jobs
+• Use Case: Manage Applications
+• Use Case: Update Resume
+
+
+Create User Profile:-
+exports.createUser = async (userObj) => {
+    await db.query("insert into users_table (password,first_name,last_name,email,phone_number) values (?,?,?,?,?)",[userObj.password,userObj.first_name,userObj.last_name,userObj.email,userObj.phone_number]); 
+    
+    let [userObjres]=await db.query("select * from users_table order by user_id desc limit 1");
+    return userObjres[0];
+};
+
+Search Jobs:-
+exports.searchJobById = async (jobid) => {
+    let [jobArray] = await db.query("select * from job_listing_table where job_id="+jobid); 
+    return jobArray[0];
+};
+
