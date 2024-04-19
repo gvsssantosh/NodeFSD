@@ -1,0 +1,30 @@
+
+What is Testing in Software Development? Why do we do testing?
+
+Software testing can be stated as the process of verifying and validating whether a software or application is bug-free, meets the technical requirements as guided by its design and development, and meets the user requirements effectively and efficiently by handling all the exceptional and boundary cases.
+
+The process of software testing aims not only at finding faults in the existing software but also at finding measures to improve the software in terms of efficiency, accuracy, and usability. 
+-Defects can be identified early
+-Improves quality of software
+-Increased customer satisfaction
+-Helps with scalability
+
+
+What is Unit Testing? 
+Unit testing is the process where you test the smallest functional unit of code. Software testing helps ensure code quality, and it's an integral part of software development. It's a software development best practice to write software as small, functional units then write a unit test for each code unit.
+
+What are benefits of Unit testing?
+-Efficient bug discovery,
+-Unit Testing allows developers to learn what functionality is provided by a unit and how to use it to gain a basic understanding of the unit API.
+
+What is AAA in Unit Testing?
+AAA (Arrange-Act-Assert) pattern
+
+Arrange:
+This section is where the initial state is setup. A good unit test tests only a single state change. So we want to put our code into the initial state. For, example, we arrange by creating a new Adder instance.
+
+Act:
+This is where we execute some kind of state change or computation. For example, we call the add method in the Act section.
+
+Assert:
+Here we assert that the resulting state, or computation is what we expect. This is where we cause the test to fail if we get an unexpected result, or pass if we get the expected result.
