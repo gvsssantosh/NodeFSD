@@ -1,0 +1,110 @@
+1. What is API in Web Application? 
+
+APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols. For example, the weather bureau’s software system contains daily weather data. The weather app on your phone “talks” to this system via APIs and shows you daily weather updates on your phone.
+
+API stands for Application Programming Interface.
+
+2. What is the role of web server in Web application?
+
+A web server is a computer system capable of delivering web content to end users over the internet via a web browser.
+Web servers are primarily used to process and manage HTTP/HTTPS requests and responses from the client system.
+
+other functions:
+Store and protect website data
+Control bandwidth to regulate network traffic
+Server-side web scripting
+Virtual hosting
+
+
+3. What are the http verbs? 
+
+CONNECT
+The CONNECT method establishes a tunnel to the server identified by the target resource.
+
+OPTIONS
+The OPTIONS method describes the communication options for the target resource.
+
+TRACE
+The TRACE method performs a message loop-back test along the path to the target resource.
+
+PATCH
+The PATCH method applies partial modifications to a resource.
+
+HEAD
+Retrieves only the HTTP header of a resource. Applicable to all resources.
+The HEAD method asks for a response identical to a GET request, but without the response body.
+
+GET
+The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
+SAFE - IDEMPOTENT
+
+POST
+The POST method submits an entity to the specified resource, often causing a change in state or side effects on the server.
+NOT SAFE - NOT IDEMPOTENT
+
+PUT
+The PUT method replaces all current representations of the target resource with the request payload.
+NOT SAFE - IDEMPOTENT
+
+DELETE
+The DELETE method deletes the specified resource.
+NOT SAFE - IDEMPOTENT
+
+1. Idempotency : An operation is idempotent if performing it multiple times has the same effect as performing it once. GET is inherently idempotent, while PUT and DELETE can be idempotent if designed properly. POST, on the other hand, is not idempotent, as creating a new resource each time will have a different effect.
+
+2. Safety : A safe operation is one that does not modify the state of the server. GET is considered a safe operation, as it does not change anything on the server. However, POST, PUT, and DELETE are not safe, as they can alter server state.
+
+
+4. Which http verbs are using in Web API?
+
+PUT, POST, GET, DELETE
+
+5. What are the http status codes?  Study on 4XX and 5XX status codes?
+
+An HTTP status code is a server response to a browser’s request. When you visit a website, your browser sends a request to the site’s server, and the server then responds to the browser’s request with a three-digit code: the HTTP status code.
+
+4XX — Client error codes: The server couldn’t find (or reach) the page or website. This is an error on the site’s side. 
+
+5XX — Server error codes: The client made a valid request, but the server failed to complete the request.
+
+4XX — Client Error
+400 Bad Request
+401 Unauthorized
+402 Payment Required
+403 Forbidden
+404 Not Found
+405 Method Not Allowed
+406 Not Acceptable
+407 Proxy Authentication Required
+408 Request Timeout
+409 Conflict
+410 Gone
+411 Length Required
+412 Precondition Failed
+413 Content Too Large
+414 URI Too Long
+415 Unsupported Media Type
+416 Range Not Satisfiable
+417 Expectation Failed
+421 Misdirected Request
+422 Unprocessable Content
+423 Locked
+424 Failed Dependency
+425 Too Early
+426 Upgrade Required
+428 Precondition Required
+429 Too Many Requests
+431 Request Header Fields Too Large
+451 Unavailable for Legal Reasons
+ 	 
+5XX — Server Error
+500 Internal Server Error
+501 Not Implemented
+502 Bad Gateway
+503 Service Unavailable
+504 Gateway Timeout
+505 HTTP Version Not Supported
+506 Variant Also Negotiates
+507 Insufficient Storage
+508 Loop Detected
+
