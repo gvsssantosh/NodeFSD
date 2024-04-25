@@ -1,0 +1,38 @@
+1. What is MVC?
+The Model-View-Controller (MVC) framework is an architectural/design pattern that separates an application into three main logical components Model, View, and Controller.
+
+It isolates the business logic and presentation layer from each other.
+
+Features of MVC :
+It provides a clear separation of business logic, UI logic, and input logic.
+It offers full control over your HTML and URLs which makes it easy to design web application architecture.
+It is a powerful URL-mapping component using which we can build applications that have comprehensible and searchable URLs.
+It supports Test Driven Development (TDD).
+
+Components:
+Controller:
+The controller is the component that enables the interconnection between the views and the model so it acts as an intermediary. 
+The controller doesn’t have to worry about handling data logic, it just tells the model what to do. It processes all the business logic and incoming requests, manipulates data using the Model component, and interact with the View to render the final output.
+
+View:
+The View component is used for all the UI logic of the application. It generates a user interface for the user. Views are created by the data which is collected by the model component but these data aren’t taken directly but through the controller. It only interacts with the controller.
+
+Model:
+The Model component corresponds to all the data-related logic that the user works with. This can represent either the data that is being transferred between the View and Controller components or any other business logic-related data. It can add or retrieve data from the database. It responds to the controller’s request.
+
+2. How to implement MVC in Express JS?
+3. Why do we need view engines in MVC?
+
+The view engine is responsible for creating HTML from your views. Views are usually some kind of mixup of HTML and a programming language.
+
+Dynamic Content Generation: View engines enable dynamic content generation by allowing developers to embed server-side code within HTML templates. This dynamic content might include data fetched from a database or other external sources, making it possible to generate customized views for different users or situations.
+
+Template Inheritance and Reusability: View engines often support features like template inheritance and partials, which promote code reusability and maintainability. With template inheritance, developers can create a base template with common elements (e.g., header, footer) and extend it in specific views, reducing code duplication.
+
+4. What are the examples of view engines?
+ Express supports various view engines, such as EJS, Pug (formerly Jade), Handlebars, etc. This allows developers to choose the view engine that best fits their preferences and project requirements. Each view engine has its syntax and features, catering to different needs and coding styles.
+
+5. What is process object in Node JS?
+The process object in Node.js is a global object that can be accessed inside any module without requiring it. There are very few global objects or properties provided in Node.js and process is one of them. It is an essential component in the Node.js ecosystem as it provides various information sets about the runtime of a program.
+
+This process object is an instance of the EventEmitter class.
