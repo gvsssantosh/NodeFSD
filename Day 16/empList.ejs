@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <style>
+        h3 {
+            color: blue;
+            text-align: center;
+        }
+
+        div {
+            border: 2px solid blue;
+            margin: 10px;
+            padding: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h3>This is my first view page created using EJS View Engine</h3>
+    <hr />
+
+
+    <h2>All Employee Details Page</h2>
+    <hr />
+    <table border="2" width="300">
+        <tr>
+            <th>empno</th>
+            <th>ename</th>
+            <th>job</th>
+            <th>salary</th>
+            <th>deptno</th>
+        </tr>
+            <% for (let item of empArr){%>
+        <tr>
+            <td>                <%=item.empno%>            </td>
+            <td>                <%=item.ename%>            </td>
+            <td>                <%=item.job%>            </td>
+            <td>                <%=item.salary%>            </td>
+            <td>                <%=item.deptno%>            </td>
+        </tr>
+        <%}%>
+
+    </table>
+</body>
+
+</html>
