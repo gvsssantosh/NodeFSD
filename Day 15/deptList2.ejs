@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <style>
+            h3{
+                color : blue;
+                text-align: center;
+            }
+
+            div
+            {
+                border: 2px solid blue;
+                margin: 10px;
+                padding : 5px;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <h3>This is my first view page created using EJS View Engine</h3>
+        <hr/>
+
+        <div>
+            <p>
+                Welcome <%=uname%>
+            </p>
+        </div>
+       
+        
+
+        <div>
+            <ol>
+                <% for(let item of citiesArray) { %>
+                       <li><%=item%></li>
+                 <%  } %>    
+           </ol>
+       
+       
+        
+
+        <table border="2" width="300">
+                <tr>
+                    <th>
+                        City Name
+                    </th>
+                </tr>
+                <% for(let item of citiesArray) { %>
+                    <tr>
+                    <td><%=item%></td>
+                    </tr>
+                <%  } %>            
+        </table>
+    </div>
+
+ 
+
+        <div>
+            Dept Number :  <%=deptObj.deptno%>  <br/>
+            Dept Name :  <%=deptObj.dname%>  <br/>
+            Dept Location :  <%=deptObj.loc%>  <br/>
+        </div>
+
+        <div>
+            <img src="/images/931352_1.jpg" width="500" alt="Example Image">
+        </div>
+
+
+    </body>
+</html>
