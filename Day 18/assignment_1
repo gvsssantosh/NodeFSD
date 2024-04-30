@@ -1,0 +1,59 @@
+1. What is CORS?
+
+Cross-Origin Resource Sharing is an HTTP-header based mechanism implemented by the browser which allows a server or an API(Application Programming Interface) to indicate any origins (different in terms of protocol, hostname, or port) other than its origin from which the unknown origin gets permission to access and load resources.
+
+2. How to use cors middle ware in express?
+
+const cors = require('cors')
+// enabling CORS for any unknown origin(https://xyz.example.com) 
+app.use(cors());
+
+// enabling CORS for some specific origins only. 
+let corsOptions = { 
+   origin : ['http://localhost:5500'], 
+} 
+  
+app.use(cors(corsOptions))
+
+
+Enabling CORS Pre-Flight
+Certain CORS requests are considered ‘complex’ and require an initial OPTIONS request (called the “pre-flight request”). An example of a ‘complex’ CORS request is one that uses an HTTP verb other than GET/HEAD/POST (such as DELETE) or that uses custom headers. To enable pre-flighting, you must add a new OPTIONS handler for the route you want to support.
+
+3. How to redirect from express application another website?
+
+302 Found - This status code signifies that the URL is temporarily moved to a new location. The original URL may be available again in the future.
+
+To use Redirect with ExpressJs, we can use the res.redirect() method. This method redirects the user to a different URL. By default, the status code set is 302 Found.
+
+res.redirect ( status, path)
+
+app.get("old-url" , (req,res) => {
+	res.redirect("https://www.codingninjas.com/");
+});
+
+4. What are the cookies? How to use cookies in express?
+
+Cookies are simple files that are stored on user’s computer.It stores the data in a text file. This helps us to keep track of the user action. Cookies can be accessed either by the web server or client computer.
+
+What’s in a cookie?
+Each cookie is finally small lookup table involves pairs of key-values – for example (first name, Steve) (last name, jobs).
+
+Why are Cookies Used?
+Cookies are an adequate way to carry data between sessions on a website, without loading a server machine with huge amounts of data storage.If we store data on a server without cookies it would be insecure and inconvenient because then it will get difficult to restore users data without requiring a login on each visit to the website.
+
+npm install cookie-parser
+var  cookieparser = require(‘cookie-parser’);
+app.use(cookieparser());
+
+app.get('/', function(req, res) {
+   res.cookie('mycookies', 'express')
+       .send('cookie set');
+ });
+
+
+Browser always sends back cookies every time it queries the server. To view cookies from your server, add the following console to that route.
+
+console.log(‘cookies:’ ,req.cookies)
+You will get the output like this:-
+
+Cookies: {mycookies:  ‘express’ }
