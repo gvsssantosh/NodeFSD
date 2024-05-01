@@ -1,0 +1,26 @@
+Day19: 30th Apr, 2024  -- Assignments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consider the following database tables:
+			1.  Products :   pid, pname, price, category, qty 			(qty refers qty in stock)
+			2.  Orders  :      orderId,  pname, price, qty, totalAmount    (qty refers required qty by user)
+
+Implement the following requirement using Microservices Architecture
+
+	a. Create a Product API that provide the following end-points (routes):
+				---   getAllProudcts:   
+				---   getProductById
+	
+	b. Create a Order API that provides the following end-points:
+				---  placeOrder()	:		add new order to database 
+							request data :   productId, qty
+						
+						a.   while placing the order get the product details from Product API 
+						b.   prepare order object and insert in database
+						
+				---   getOrders():		get all orders from database 
+				
+						
+						
+						
+ 
