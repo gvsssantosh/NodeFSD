@@ -1,0 +1,359 @@
+Study the following questions : 
+Go through the HTML concepts. 
+1. Forms, Tables, Lists etc...
+<form action="/action_page.php">
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label><br>
+  <input type="radio" id="java" name="fav_language" value="java">
+  <label for="java">Java</label><br>
+  <label for="name">Enter your Name</label>
+  <input type="text" id="name" name="Name" value="San">
+  <input type="submit" value="Submit">
+</form> 
+
+If the name attribute is omitted, the value of the input field will not be sent at all.
+
+The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.
+
+2. Inline Elements vs Block elements
+3. Legend and FieldSet Tags
+4. More focus on Forms Tags
+
+
+Go through the HTML concepts. 
+
+:  Forms, Tables, Lists etc...
+->
+HTML forms are essential for collecting user input on web pages. They allow users to input data and interact with websites in various ways. Here's everything you need to know about HTML forms:
+
+Structure of a Form:
+
+
+<form action="/submit_form" method="post">
+  <!-- Input fields, buttons, etc. go here -->
+</form>
+
+<form>: This tag defines the start and end of the form. All input elements are enclosed within this tag.
+
+action: Specifies where to send the form data when it's submitted.
+
+method: Specifies the HTTP method to use when sending form data (e.g., POST, GET).
+
+Input Elements:
+Various input elements can be used within a form to collect different types of data:
+
+Text Input:
+
+<input type="text" name="username">
+
+Password Input:
+
+<input type="password" name="password">
+
+Checkbox:
+
+
+<input type="checkbox" name="subscribe" value="yes">
+
+Radio Buttons:
+
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+
+Dropdown Menu:
+
+
+<select name="country">
+  <option value="usa">USA</option>
+  <option value="uk">UK</option>
+  <option value="canada">Canada</option>
+</select>
+
+Textarea:
+
+
+<textarea name="message"></textarea>
+
+File Upload:
+
+
+<input type="file" name="file">
+
+Submit Button:
+
+
+<input type="submit" value="Submit">
+
+Form Attributes:
+
+name: Provides a name for the form.
+
+id: Provides a unique identifier for the form.
+
+autocomplete: Specifies whether the browser should automatically complete the form.
+
+enctype: Specifies how form data should be encoded before sending it to the server (e.g., "multipart/form-data" for file uploads).
+Form Submission:
+When the user submits the form, the data is sent to the server specified in the action attribute.
+For GET method, form data is appended to the URL.
+For POST method, form data is sent in the request body.
+
+Accessibility:
+Use appropriate labels (<label>) for each input field to improve accessibility and usability.
+Use aria-* attributes to enhance accessibility for screen readers.
+
+Validation:
+HTML5 introduced form validation features like required, pattern, min, max, etc., to enforce input requirements.
+JavaScript can be used for more complex validation.
+
+ 2. Tables in html
+
+->Tables in HTML are used to display data in a structured format, typically organized into rows and columns. Here's everything you need to know about creating tables in HTML:
+
+Basic Table Structure:
+
+
+
+<table>
+  <tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+    <th>Header 3</th>
+  </tr>
+  <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+    <td>Data 3</td>
+  </tr>
+  <!-- More rows can be added here -->
+</table>
+
+<table>: Defines the start and end of the table.
+<tr>: Defines a table row.
+<th>: Defines a table header cell (for column headings).
+<td>: Defines a standard table data cell.
+
+Table Headers and Data Cells:
+Use <th> for table headers. They are bold and centered by default.
+Use <td> for regular data cells.
+
+Table Attributes:
+border: Specifies the width of the table border (deprecated in HTML5, use CSS for styling).
+
+cellpadding: Specifies the space between the cell content and cell borders.
+
+cellspacing: Specifies the space between cells.
+
+width, height: Specifies the width and height of the table.
+
+align: Specifies the alignment of the table (deprecated in HTML5, use CSS for alignment).
+
+Table Accessibility:
+Use <caption> to provide a brief description or title for the table.
+Use scope="col" and scope="row" attributes to associate headers with columns and rows respectively.
+Use <thead>, <tbody>, and <tfoot> to group table rows into header, body, and footer sections respectively for
+ better accessibility and styling.
+
+Spanning Rows and Columns:
+
+Use colspan attribute to make a cell span multiple columns.
+Use rowspan attribute to make a cell span multiple rows.
+
+Styling Tables:
+
+Use CSS for styling tables, including borders, colors, fonts, etc.
+Classes and IDs can be used to target specific tables or table elements for styling.
+
+Responsive Tables:
+Use CSS techniques like media queries and overflow properties to make tables responsive on different screen sizes.
+Consider alternative layouts for small screens, like displaying data in a list format.
+HTML tables are versatile tools for organizing and presenting tabular data on web pages. However, it's important to use them appropriately and consider accessibility and responsive design principles for optimal user experience. 
+
+3.Lists in HTML
+->
+Lists in HTML are used to organize and present information in a structured format. There are three main types of lists: unordered lists (<ul>), ordered lists (<ol>), and definition lists (<dl>). Here's everything you need to know about lists in HTML:
+
+Unordered List (<ul>):
+
+
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<ul>: Defines an unordered list.
+
+<li>: Defines each list item.
+
+Ordered List (<ol>):
+
+
+<ol>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ol>
+
+<ol>: Defines an ordered list.
+
+<li>: Defines each list item.
+
+List Attributes:
+
+type: Specifies the type of marker for list items in ordered lists (1, A, a, I, i).
+
+start: Specifies the starting value for the first item in an ordered list.
+
+reversed: Reverses the order of the items in an ordered list.
+
+compact: Decreases the spacing between list items (deprecated).
+
+Definition List (<dl>):
+
+
+<dl>
+  <dt>Term 1</dt>
+  <dd>Description 1</dd>
+  <dt>Term 2</dt>
+  <dd>Description 2</dd>
+</dl>
+
+<dl>: Defines a definition list.
+
+<dt>: Defines each term in the list.
+
+<dd>: Defines each description in the list.
+
+Nested Lists:
+Lists can be nested within each other to create hierarchical structures.
+
+html
+Copy code
+<ul>
+  <li>Item 1</li>
+  <li>Item 2
+    <ul>
+      <li>Subitem 2.1</li>
+      <li>Subitem 2.2</li>
+    </ul>
+  </li>
+  <li>Item 3</li>
+</ul>
+
+List Accessibility:
+Use semantic HTML elements (<ul>, <ol>, <li>, <dl>, <dt>, <dd>) to provide meaningful structure.
+Properly label list items to ensure accessibility for screen readers.
+List Styling:
+Use CSS to style lists, including marker styles, spacing, font properties, etc.
+Classes and IDs can be used to target specific lists or list items for styling.
+HTML lists are fundamental for structuring content on web pages, whether it's for navigation menus, itemized content, or glossaries. Understanding how to use them effectively and semantically is essential for creating well-structured and accessible web pages.
+
+2. Inline Elements vs Block elements
+->
+
+In HTML, elements are categorized into two main types based on their default display behavior: inline elements and block elements.
+
+Inline Elements:
+
+Inline elements are elements that do not start on a new line and only take up as much width as necessary. They typically flow within the content of a block-level element.
+ Examples of inline elements include <span>, <a>, <strong>, <em>, <img>, <input>, <button>, and <i>.
+
+Example:
+
+
+
+<p>This is an <strong>inline</strong> element.</p>
+
+Block Elements:
+
+Block elements, on the other hand, start on a new line and occupy the full width available to them. They create "blocks" of content. Examples of block elements include 
+<div>, <p>, <h1> to <h6>, <ul>, <ol>, <li>, <table>, <form>, and <blockquote>.
+
+Example:
+
+
+
+<div>This is a <p>block</p> element.</div>
+
+Key Differences:
+
+Line Break: Block elements start on a new line, while inline elements do not.
+
+Width: Block elements occupy the full width available to them, while inline elements only take up as much width as necessary.
+
+Containment: Inline elements can be contained within block elements, but block elements cannot be contained within inline elements.
+
+Styling:
+
+Block elements can have margins, padding, and width set explicitly.
+
+Inline elements are often used for small spans of text or elements that are part of a larger block-level structure.
+
+
+3. Legend and FieldSet Tags
+->
+
+The <legend> and <fieldset> tags are used together in HTML forms to group related form elements and provide a caption or legend for the group. Here's how they work:
+
+<fieldset> Tag:
+
+The <fieldset> tag is used to group related form elements together. It visually separates the group from other content on the page and 
+often displays a border around the grouped elements. It's particularly useful for structuring and organizing complex forms.
+
+Example:
+
+
+
+<form>
+  <fieldset>
+    <legend>Personal Information</legend>
+    <!-- Form elements related to personal information -->
+  </fieldset>
+</form>
+
+Attributes:
+
+disabled: Disables all form controls within the <fieldset>.
+
+name: Assigns a name to the fieldset (rarely used).
+
+<legend> Tag:
+
+The <legend> tag is used to provide a caption or title for the <fieldset> element. It helps to provide context or describe the purpose of the grouped form elements.
+
+Example:
+
+
+
+<form>
+  <fieldset>
+    <legend>Personal Information</legend>
+    <!-- Form elements related to personal information -->
+  </fieldset>
+</form>
+
+Attributes:
+
+None specific to the <legend> tag.
+
+Usage Guidelines:
+Semantic Grouping: Use <fieldset> and <legend> to semantically group related form controls together.
+
+Accessibility: Providing a clear and descriptive <legend> helps users with screen readers understand the purpose of the grouped form elements.
+
+Styling: Both <fieldset> and <legend> can be styled using CSS to match the design of your web page.
+
+Accessibility Considerations:
+
+Screen readers often announce the <legend> as a label for the grouped form elements, improving accessibility.
+
+Ensure that the <legend> provides meaningful context and describes the purpose of the grouped elements clearly.
+
+
+4. More focus on Forms Tags

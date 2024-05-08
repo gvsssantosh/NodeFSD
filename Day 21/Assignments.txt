@@ -1,0 +1,21 @@
+1. Create a web page to prepare some Q & A web page. 
+	Hints:
+	a. Questions should be red color
+	b. Answers should be in blue color
+	c.  Try to add some 10 questions
+	
+2.   Create a web page to display films information using table tag  (Refer the image for sample output)
+
+	Hint:  Styles are optional. 
+
+3.   Create Pizza Order Form using HTML Forms concept?    (Refer the image for sample output)	
+
+		Hint:  Styles are optional. 
+
+
+4.  Study the following items:
+		a.  examples that we discussed in the session (Login, Registration).
+		b.  Find out diff. between get and post methods?
+		c.  Why do we use  tbody, tfoot, thead tags in html tables?	
+		d.  How to display icons in title bar?
+		e.  Attributes:  required, placeholder, pattern

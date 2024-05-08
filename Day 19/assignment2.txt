@@ -1,0 +1,39 @@
+1. What is Microservice?   
+Microservices are an architectural and organizational approach to software development where software is composed of small independent services that communicate over well-defined APIs. These services are owned by small, self-contained teams.
+
+Characteristics of Microservices
+Autonomous
+Each component service in a microservices architecture can be developed, deployed, operated, and scaled without affecting the functioning of other services. Services do not need to share any of their code or implementation with other services. Any communication between individual components happens via well-defined APIs.
+
+
+Specialized
+Each service is designed for a set of capabilities and focuses on solving a specific problem. If developers contribute more code to a service over time and the service becomes complex, it can be broken into smaller services.
+
+
+2. Diff.  between Monolithic   Arch.  vs  Microservice Arch?
+
+With monolithic architectures, all processes are tightly coupled and run as a single service. This means that if one process of the application experiences a spike in demand, the entire architecture must be scaled.
+
+In microservices, because they are independently run, each service can be updated, deployed, and scaled to meet demand for specific functions of an application.
+
+3. Advantages of Microservice?
+
+
+Agility:
+Microservices foster an organization of small, independent teams that take ownership of their services. Teams act within a small and well understood context, and are empowered to work more independently and more quickly. This shortens development cycle times. You benefit significantly from the aggregate throughput of the organization.
+
+Flexible Scaling:
+Microservices allow each service to be independently scaled to meet demand for the application feature it supports. This enables teams to right-size infrastructure needs, accurately measure the cost of a feature, and maintain availability if a service experiences a spike in demand.
+
+
+Easy Deployment:
+Microservices enable continuous integration and continuous delivery, making it easy to try out new ideas and to roll back if something doesn’t work. The low cost of failure enables experimentation, makes it easier to update code, and accelerates time-to-market for new features.
+
+Technological Freedom:
+Microservices architectures don’t follow a “one size fits all” approach. Teams have the freedom to choose the best tool to solve their specific problems. As a consequence, teams building microservices can choose the best tool for each job.
+
+Reusable Code:
+Dividing software into small, well-defined modules enables teams to use functions for multiple purposes.
+
+Resilience:
+Service independence increases an application’s resistance to failure. With microservices, applications handle total service failure by degrading functionality and not crashing the entire application.
